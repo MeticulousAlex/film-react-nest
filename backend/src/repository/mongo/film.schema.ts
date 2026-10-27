@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { FilmDto, ScheduleDto } from '../dto/films.dto';
+import { FilmDto, ScheduleDto } from '../../films/dto/films.dto';
 
 @Schema({ _id: false })
 export class Schedule implements ScheduleDto {
