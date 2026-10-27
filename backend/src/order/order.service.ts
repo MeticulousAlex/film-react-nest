@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { randomUUID } from 'node:crypto';
-import { FilmsRepository } from '../films/films.repository';
+import { FilmsRepository } from '../repository/films.repository';
 import { ListDto } from '../films/dto/films.dto';
 import { CreateOrderDto, OrderedTicketDto } from './dto/order.dto';
 

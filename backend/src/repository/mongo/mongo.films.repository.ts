@@ -1,11 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { FilmDto, ScheduleDto } from './dto/films.dto';
-import { Film } from './schemas/film.schema';
+import { FilmDto, ScheduleDto } from '../../films/dto/films.dto';
+import { FilmsRepository } from '../films.repository';
+import { Film } from './film.schema';
 
 @Injectable()
-export class FilmsRepository {
+export class MongoFilmsRepository implements FilmsRepository {
   constructor(@InjectModel(Film.name) private readonly film: Model<Film>) {}
 
   findAll(): Promise<FilmDto[]> {
